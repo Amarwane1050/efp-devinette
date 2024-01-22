@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Devinette</h1>
+    <label for="number">
+      <input type="number" id="number" value=""/>
+    </label>
+    <button id="btn">Go</button>
+    <h2 id="welcome"></h2>
+ 
+    <script>
+        let number,message;
+        let action,display,input;
+        action =document.getElementById('btn')
+        number= Math.round(Math.random()*(10-1)+1)
+        
+        action.addEventListener ('click',() => {
+            input =document.getElementById('number').value
+            console.log(input)
+            if (number ==input){
+                console.log('win')
+                message='win';
+                display=document.getElementById('Welcome');
+                display.innerHTML=message;
+
+            }
+            else if (number<input){
+                console.log('plus petit')
+            }
+            else{
+                console.log('plus grand')
+
+            }
+        })
+
+    </script>
+</body>
+</html>
